@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round Counter</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Park Round Counter</h1>
+        <div class="card">
+            <h2>Round Calculator</h2>
+            <p>Rounds Completed: <span id="roundCount">0</span></p>
+            <div class="goal-input">
+                <label for="roundGoal">Round Goal:</label>
+                <input type="number" id="roundGoal" placeholder="Set Round Goal">
+            </div>
+            <button id="setGoalBtn">Set Goal</button>
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Timer</h2>
+            <p>Time Elapsed: <span id="timeElapsed">00:00:00</span></p>
+            <p>Average Time per Round: <span id="averageTime">00:00:00</span></p>
+            <div class="button-group">
+                <button id="startBtn">Start Counting</button>
+                <button id="roundBtn" disabled>Round Completed</button>
+                <button id="pauseBtn" disabled>Pause</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Session & Sound</h2>
+            <div class="button-group">
+                <button id="saveSessionBtn">Save Session</button>
+                <button id="loadSessionBtn">Load Session</button>
+            </div>
+            <input type="file" id="soundUpload" accept="audio/*">
+            <span>No file chosen</span>
+            <button id="toggleDarkMode">Toggle Dark Mode</button>
+        </div>
+    </div>
+    <audio id="notificationSound" src="notification.mp3"></audio>
+    <script src="./script.js"></script>
+</body>
+</html>
